@@ -18,8 +18,13 @@ app.listen(process.env.PORT || 3000, () => {
 
   schedule.scheduleJob({hour: 22, minute: 27, dayOfWeek: 2}, async () => {
     console.log('Generating Lighthouse report...');
-    await generateReport('mobile', mobileConfig);
-    await generateReport('desktop', desktopConfig);
+    try {
+    	await generateReport('mobile', mobileConfig);
+    } catch(e) {
+    	console.log('An error!', e);
+    }
+
+    //await generateReport('desktop', desktopConfig);
   });
 });
 
