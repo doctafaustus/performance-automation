@@ -8,6 +8,8 @@ const express = require('express');
 const mobileConfig = require('lighthouse/lighthouse-core/config/lr-mobile-config.js');
 const desktopConfig = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
 
+
+console.log('THE DATE', new Date().toLocaleDateString());
 console.log('WHAT IS THIS TIME', new Date().toLocaleTimeString());
 
 const app = express();
