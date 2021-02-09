@@ -1,0 +1,19 @@
+{
+  "name": "lovevery-performance-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-launcher": "^0.13.4",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "lighthouse": "^7.0.1",
+    "node-fetch": "^2.6.1",
+    "node-schedule": "^2.0.0"
+  }
+}
