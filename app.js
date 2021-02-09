@@ -13,7 +13,7 @@ console.log('THE DATE', new Date().toLocaleDateString());
 console.log('WHAT IS THIS TIME', new Date().toLocaleTimeString());
 
 const app = express();
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3000, async () => {
   console.log('App listening on port 3000');
 
   //schedule.scheduleJob({hour: 22, minute: 48, dayOfWeek: 2}, async () => {
