@@ -55,7 +55,7 @@ async function generateReport(suffix, config) {
     fetch('https://lovevery.atlassian.net/wiki/rest/api/content/1235714087/child/attachment', {
       method: 'POST',
       headers: {
-       'Authorization': 'Basic ' + Buffer.from(`${process.env.USERNAME}-${process.env.PASSWORD}`).toString('base64'),
+       'Authorization': 'Basic ' + Buffer.from(`${process.env.USERNAME}:${process.env.PASSWORD}`).toString('base64'),
        'X-Atlassian-Token': 'nocheck',
       },
       body: form
