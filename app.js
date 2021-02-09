@@ -8,6 +8,8 @@ const express = require('express');
 const mobileConfig = require('lighthouse/lighthouse-core/config/lr-mobile-config.js');
 const desktopConfig = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
 
+console.log('WHAT IS THIS TIME', new Date().toLocaleTimeString());
+
 const app = express();
 app.listen(process.env.PORT || 3000, () => {
   console.log('App listening on port 3000');
