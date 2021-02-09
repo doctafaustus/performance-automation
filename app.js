@@ -16,7 +16,7 @@ const app = express();
 app.listen(process.env.PORT || 3000, () => {
   console.log('App listening on port 3000');
 
-  schedule.scheduleJob({hour: 20, minute: 25, dayOfWeek: 2}, async () => {
+  schedule.scheduleJob({hour: 22, minute: 27, dayOfWeek: 2}, async () => {
     console.log('Generating Lighthouse report...');
     await generateReport('mobile', mobileConfig);
     await generateReport('desktop', desktopConfig);
