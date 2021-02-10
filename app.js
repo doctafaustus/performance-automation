@@ -24,7 +24,7 @@ app.listen(process.env.PORT || 3000, async () => {
     	console.log('An error!', e);
     }
 
-    
+
     //await generateReport('desktop', desktopConfig);
   //});
 });
@@ -32,7 +32,7 @@ app.listen(process.env.PORT || 3000, async () => {
 
 async function generateReport(suffix, config) {
 
-  const chrome = await chromeLauncher.launch({chromeFlags: ['--headless']});
+  const chrome = await chromeLauncher.launch({chromeFlags: ['--headless', '--no-sandbox']});
   const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], port: chrome.port };
   const runnerResult = await lighthouse('https://lovevery.com/products/the-play-kits', options, config);
   const reportHtml = runnerResult.report;
