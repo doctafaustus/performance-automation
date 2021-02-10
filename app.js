@@ -24,6 +24,7 @@ app.listen(process.env.PORT || 3000, async () => {
     	console.log('An error!', e);
     }
 
+    
     //await generateReport('desktop', desktopConfig);
   //});
 });
